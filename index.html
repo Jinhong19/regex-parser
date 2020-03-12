@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regex Parser</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center">Regex Parser</h1>
+      <div id="regex-component" class="my-2">
+        <label for="regex-input">Regular Expression:</label>
+        <input type="text" class="form-control" id="regex-input" />
+      </div>
+      <div id="text-component" class="my-2">
+        <label for="text-input">Text:</label>
+        <textarea
+          class="form-control"
+          id="text-input"
+          rows="4"
+          cols="50"
+        ></textarea>
+      </div>
+      <button type="button" class="btn btn-primary my-2">Parse!</button>
+      <div id="result-component" class="mt-4">
+        <p>
+          The result of parsing your regex on the input text you've provided:
+        </p>
+        <p id="result-text"></p>
+      </div>
+    </div>
+  </body>
+</html>
