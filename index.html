@@ -10,29 +10,42 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <script src="regex.js"></script>
+    <style>
+      #highlighted-result {
+        white-space: pre-wrap;
+      }
+      #highlighted-result span {
+        background-color: yellow;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
       <h1 class="text-center">Regex Parser</h1>
       <div id="regex-component" class="my-2">
         <label for="regex-input">Regular Expression:</label>
-        <input type="text" class="form-control" id="regex-input" />
+        <input
+          type="text"
+          class="form-control"
+          id="regex-input"
+          value="[A-Z]\w+"
+        />
       </div>
       <div id="text-component" class="my-2">
         <label for="text-input">Text:</label>
-        <textarea
-          class="form-control"
-          id="text-input"
-          rows="4"
-          cols="50"
-        ></textarea>
+        <textarea class="form-control" id="text-input" rows="4" cols="50">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu orci et dolor lacinia elementum non non nisi. Proin mattis mollis ipsum nec gravida. Proin ante elit, egestas et pulvinar sed, ultricies sit amet ex. Nulla et eleifend eros.</textarea
+        >
       </div>
-      <button type="button" class="btn btn-primary my-2">Parse!</button>
+      <button type="button" class="btn btn-primary my-2" onclick="highlight()">
+        Parse!
+      </button>
       <div id="result-component" class="mt-4">
         <p>
           The result of parsing your regex on the input text you've provided:
         </p>
-        <p id="result-text"></p>
+        <p id="highlighted-result" class="lead"></p>
       </div>
     </div>
   </body>
